@@ -98,21 +98,9 @@ print(voting_data)
 # using the len() function
 print(len(voting_data))
 
-# How many votes did you get? input() functions asks for an input from user
-my_votes = input("How many votes did you get in the election? ")
-if( my_votes.isdigit()):
-    total_votes = input("What is the total votes in the election? ")
-else:
-    print("Please enter a number.")
-    my_votes = input("Please enter a number")
-
-
-# Calculate the percentage of votes you received.
-percentage_votes = (float(my_votes) / float(total_votes)) * 100
-
-
-print("I received " + str(percentage_votes)+"% of the total votes.")
-
-counties = ["Arapahoe","Denver","Jefferson"]
-if counties[1] == 'Denver':
-    print(counties[1])
+counties_dict = {"Arapahoe": 369237, "Denver":413229, "Jefferson": 390222}
+for county, voters in counties_dict.items():
+    print(county + " county has " + str(voters) + " registered voters.")
+    dir(int)
+    dir(float)
+    dir(bool)
